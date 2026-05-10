@@ -4,14 +4,14 @@ body {
   margin: 0 auto;
   padding: 30px 20px;
   line-height: 1.6;
-  color: #353535;
-  background: #fefff2
+  color: #E9D4C3;
+  background: #0E141C
 }
 
 header {
   padding: 90px 50px 70px 50px;
   margin-bottom: 50px;
-  color: #003bbb;
+  color: #E9D4C3;
 
 }
 
@@ -21,29 +21,34 @@ header h1 {
   line-height: 1;
   margin: 0 0 14px 0;
   letter-spacing: -2px;
-  color: #003bbb;
+  color: #909dc4 ;
 }
 
 header p {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 4px;
-  color: #003bbb;
+  color: #E9D4C3;
   margin: 0;
 }
 
 h2 {
   font-size: 1.4rem;
   margin-bottom: 14px;
-  color: #003bbb;
+  color: #909dc4  ;
 }
 
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #909dc4 ;
+}
 section {
   margin-bottom: 40px;
 }
 
 a {
-  color: #003bbb;
+  color: #909dc4;
   text-decoration: none;
 }
 
@@ -110,19 +115,19 @@ a:hover {
 .results-table {
   width: 100%;
   border-collapse: collapse;
-  color: #111;
-  background: #fefff2;
+  color: #E9D4C3;
+  background: #0E141C;
 }
 
 .results-table th,
 .results-table td {
-  border: 1px solid #003bbb;
+  border: 1px solid #909dc4;
   padding: 10px 12px;
   text-align: left;
 }
 
 .results-table th {
-  color: #003bbb;
+  color: #E9D4C3;
   font-weight: 600;
 }
 
