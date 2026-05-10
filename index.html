@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pauline De Baets | Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Pauline De Baets</h1>
+    <p> PROJECTS</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>About</h2>
+      <p>
+        EPFL Microengineering student interested in embedded systems,
+        robotics, hardware design, and applied software.
+      </p>
+    </section>
+  <!-- ROCKET TEAM -->
+    <section>
+      <h2>Projects</h2>
+      <section class="project-section">
+        <div class="project-text">
+          <h3>Line Cutter - EPFL Rocket Team</h3>
+          <p>Designed, manufactured, iterated and tested a compact pyrotechnic device using an e-match–triggered charge and a guided blade to cut high-strength Dyneema reefing lines, triggering the second phase of the rocket’s descent.</p>
+          <p>The video on the right shows an onboard camera feed of a test launch in which different sub-systems were tested. The Recovery team is responsible for the safe retrieval of the rocket after its flight, and the video shows the line cutter triggering the second phase of the rocket’s descent.</p>
+        </div>
+        <div class="project-video">
+          <center>
+            <video autoplay muted loop playsinline width="400" height="300" controls>
+              <source src="images/rocket_test_launch.mp4" type="video/mp4">
+            </video>
+          </center>
+        </div>
+      </section>
+  
+  <!-- PAC-MAN ON ATMEGA128L -->
+      <section class="project-section">
+        <div class="project-text">
+          <h3>Pac-Man on ATmega128L</h3>
+          <a href="https://github.com/pauline-db/Pacman-ATmega128L-AVR-Assembly" target="_blank">
+          View this project on GitHub
+          </a>
+          <p>Date: Spring 2025</p>
+          <p>A Pac-Man-inspired game developed in AVR Assembly for the ATmega128L microcontroller board.</p>
+          <p>The game runs on an 8×8 WS2812B LED matrix, uses an LCD 2×16 to display the menu and score, a PS/2 keyboard for menu navigation, push buttons for player movement, and the internal EEPROM to store high scores.</p>
+          <p>The video on the right shows a demonstration of the game, where players move through the maze, collect bonuses, avoid or eat enemies, and reach the green exit. After completing the first level, the game automatically starts a second, harder level. When the second level is completed, a green check mark is displayed on the LED matrix. The video only shows the led matrix forthe first part of the game, where the player (yellow) navigates the maze, collects a bonus (dark blue) to eat the enemy (red). He then proceeds to exit the first level and starts the second.</p>
+        </div>
+        <div class="media-section">
+          <img class="photo" src="images/pacman.jpg" alt="Pac-Man on ATmega128L">
+          <center>
+            <video class="video" autoplay muted loop playsinline width="400" height="300" controls>
+              <source src="images/pacman_vid.mov" type="video/mp4">
+            </video>
+          </center>
+            
+        </div>
+      </section>
+  <!-- RADAR HAND GESTURE RECOGNITION -->
+      
+      <section class="project-section">
+  <div class="project-text">
+    <h3>Radar Gesture Recognition</h3>
+
+    <a href="https://github.com/pauline-db/Machine-Learning-Radar-Based-Hand-gesture-recognition" target="_blank">
+      View this project on GitHub
+    </a>
+
+    <p>Date: October 2025</p>
+
+    <p>
+      Radar-based hand gesture recognition using micro-Doppler signatures and machine learning
+      using a dataset of four different hand gestures: click, pinch, swipe, and wave from
+      6 different participants. This project compares Chebyshev moments and micro-Doppler
+      envelope features for classifying four hand gestures.
+    </p>
+
+    <div class="table-container">
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th>Feature Extraction Method</th>
+            <th>Classifier</th>
+            <th>Best Accuracy</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Chebyshev Moments</td>
+            <td>k-NN</td>
+            <td>88.65%</td>
+          </tr>
+          <tr>
+            <td>Chebyshev Moments</td>
+            <td>1D CNN</td>
+            <td>86.31%</td>
+          </tr>
+          <tr>
+            <td>Chebyshev Moments</td>
+            <td>Quadratic SVM</td>
+            <td>83.05%</td>
+          </tr>
+          <tr>
+            <td>Micro-Doppler Envelopes</td>
+            <td>k-NN</td>
+            <td>67.0%</td>
+          </tr>
+          <tr>
+            <td>Micro-Doppler Envelopes</td>
+            <td>Linear SVM</td>
+            <td>65.1%</td>
+          </tr>
+          <tr>
+            <td>Micro-Doppler Envelopes</td>
+            <td>Logistic Regression</td>
+            <td>65.1%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+  <!-- MICRORECIF -->
+      <section class="project-section">
+        <div class="project-text">
+          <h3>Microrecif simulation</h3>
+          <a href="https://github.com/pauline-db/Project-Microrecif  " target="_blank">
+            View this project on GitHub
+          </a>
+          <p>Date: April 2024</p>
+          <p>C++/GTKmm simulation of a micro-reef ecosystem with algae, corals, scavengers, collision handling, and step-by-step graphical visualization.</p>
+        </div>
+        <div class="project-image">
+          <center>
+            <img src="images/microrécif.jpg" alt="Microrecif simulation" width="400" height="300">
+          </center>
+      </section>
+      </section>
+    
+<!-- LINE FOLLOWING ROBOT -->
+      </section>
+      <section class="project-section">
+        <div class="project-text">
+          <h3>Line following robot</h3>
+          <a href="https://github.com/pauline-db/embedded-software-robot " target="_blank">
+            View this project on GitHub
+          </a>
+          <p>Date: Spring 2026</p>
+          <p>Line follower robot with line following, object avoidance, and distance tracking capabilities. Integrated as an FSM with a main that enables the state transitions for the different assignment modes : speed variation, obstacle detection, line following, obstacle avoidance, and finally distance measurements.</p>
+        </div>
+        <div class="project-video">
+          <center>
+            <video autoplay muted loop playsinline width="400" height="300" controls>
+              <source src="images/robot_vid.mov" type="video/mp4">
+            </video>
+          </center>
+      </section>
+      </section>
+    </section>
+
+    <section>
+      <center>
+      <p>Email - <a href="mailto:pauline.debaets@epfl.ch">pauline.debaets@epfl.ch</a> - LinkedIn - <a href="https://linkedin.com/in/pauline-de-baets">pauline-de-baets</a> - GitHub - <a href="https://github.com/pauline-db">pauline-db</a></p>
+      </center>
+    </section>
+  </main>
+</body>
+</html>
