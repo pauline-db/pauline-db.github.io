@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pauline De Baets | Projects</title>
   <link rel="stylesheet" href="style.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
   <header>
@@ -37,8 +38,57 @@
             </video>
           </center>
         </div>
-      </section>
   
+      </section>
+    <section class="project-section">
+        <div class="model-container">
+        <model-viewer
+          src="models/line_cutter_centered.glb"  
+        >
+        </model-viewer>
+      </div>
+      <div class="model-container">
+        <model-viewer
+          src="models/vis_centered.glb"  
+        >
+        </model-viewer>
+      </div>
+      </section>
+  <!-- CONCEPTION DE MECHANISMES -->
+<h3>FlyForce - 3-DOF Force Sensor</h3>
+<h4>Date: Spring 2025</h4>
+<h4>Author: Pauline De Baets, Stanislas Dupanloup,
+Emmard Frangopoulos, Noé Ventura, Tim Vial </h4>
+    <section class="project-section">
+      <div class="project-text">
+        
+          <p>
+            FlyForce is a mechanical design project focused on the development of a
+            three-degree-of-freedom force sensor based on flexure mechanisms. The sensor
+            was designed to measure the contact force between a spherical stylus tip and
+            a part in all directions, while minimizing sensitivity to gravity and base
+            accelerations.
+          </p>
+
+          <p>
+            The mechanism uses elastic deformation, compliant guides, force and moment
+            balancing, and capacitive displacement sensing to estimate the applied force.
+            The final concept includes a flexible guiding system allowing two rotations
+            and one translation, as well as balancing mechanisms designed to improve
+            reliability and measurement stability.
+          </p>
+
+          <p>
+            Through analytical dimensioning and CAD-based design, the project achieved
+            stiffness values close to the target of 5 N/mm in all three directions, with
+            force resolutions below the required 1.5 mN. This project strengthened my
+            experience in compliant mechanism design, precision engineering, CAD,
+            mechanical modelling, and design iteration under industrial constraints.
+          </p>
+      </div>
+      
+    </section> 
+
   <!-- PAC-MAN ON ATMEGA128L -->
       <section class="project-section">
         <div class="project-text">
@@ -46,7 +96,8 @@
           <a href="https://github.com/pauline-db/Pacman-ATmega128L-AVR-Assembly" target="_blank">
           View this project on GitHub
           </a>
-          <p>Date: Spring 2025</p>
+          <h4>Date: Spring 2025</h4>
+          <h4>Authors: Pauline De Baets, Stanislas Dupanloup</h4>
           <p>A Pac-Man-inspired game developed in AVR Assembly for the ATmega128L microcontroller board.</p>
           <p>The game runs on an 8×8 WS2812B LED matrix, uses an LCD 2×16 to display the menu and score, a PS/2 keyboard for menu navigation, push buttons for player movement, and the internal EEPROM to store high scores.</p>
           <p>The video on the right shows a demonstration of the game, where players move through the maze, collect bonuses, avoid or eat enemies, and reach the green exit. After completing the first level, the game automatically starts a second, harder level. When the second level is completed, a green check mark is displayed on the LED matrix. The video only shows the led matrix forthe first part of the game, where the player (yellow) navigates the maze, collects a bonus (dark blue) to eat the enemy (red). He then proceeds to exit the first level and starts the second.</p>
@@ -71,8 +122,8 @@
       View this project on GitHub
     </a>
 
-    <p>Date: October 2025</p>
-
+    <h4>Date: October 2025</h4>
+    <h4>Author: Pauline De Baets</h4>
     <p>
       Radar-based hand gesture recognition using micro-Doppler signatures and machine learning
       using a dataset of four different hand gestures: click, pinch, swipe, and wave from
@@ -134,7 +185,8 @@
           <a href="https://github.com/pauline-db/Project-Microrecif  " target="_blank">
             View this project on GitHub
           </a>
-          <p>Date: April 2024</p>
+          <h4>Date: April 2024</h4>
+          <h4>Authors: Pauline De Baets, Lina Ben Sayah</h4>
           <p>C++/GTKmm simulation of a micro-reef ecosystem with algae, corals, scavengers, collision handling, and step-by-step graphical visualization.</p>
         </div>
         <div class="project-image">
@@ -152,7 +204,8 @@
           <a href="https://github.com/pauline-db/embedded-software-robot " target="_blank">
             View this project on GitHub
           </a>
-          <p>Date: Spring 2026</p>
+          <h4>Date: Spring 2026</h4>
+          <h4>Author: Pauline De Baets</h4>
           <p>Line follower robot with line following, object avoidance, and distance tracking capabilities. Integrated as an FSM with a main that enables the state transitions for the different assignment modes : speed variation, obstacle detection, line following, obstacle avoidance, and finally distance measurements.</p>
         </div>
         <div class="project-video">
@@ -161,7 +214,28 @@
               <source src="images/robot_vid.mov" type="video/mp4">
             </video>
           </center>
+        </div>
       </section>
+      </section>
+<!-- CONSTRUCTION MECANIQUE -->
+      <section class="project-section">
+        <div class="project-text">
+          <h3>Mechanical Construction</h3>
+          <h4>Date: Spring 2024</h4>
+          <h4>Author: Pauline De Baets, Eileen Rheinboldt-tran, Lina Ben Sayah, Orjowane Kaki</h4>
+        </div>
+        <div class="model-container">
+        <model-viewer
+          src="models/treuil_de_foret_centered.glb"
+          auto-rotate
+          camera-controls
+          shadow-intensity="1"
+          exposure="1"
+          camera-orbit="45deg 65deg 1m"
+          field-of-view="30deg">
+        
+        </model-viewer>
+      </div>
       </section>
     </section>
 
