@@ -8,34 +8,78 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 
+
 <body>
-  <header>
-    <h1>Pauline De Baets</h1>
-    <p>Projects</p>
-  </header>
+
+<header>
+  <h1>Pauline De Baets</h1>
+  <p>Projects</p>
+</header>
+
+<div class="page-layout">
+  <nav class="sidebar">
+    <a href="#about">About</a>
+    <a href="#line-cutter">Line Cutter</a>
+    <a href="#flyforce">FlyForce</a>
+    <a href="#pacman">Pac-Man</a>
+    <a href="#radar">Radar Gesture</a>
+    <a href="#microrecif">Microrecif</a>
+    <a href="#line-robot">Line Robot</a>
+    <a href="#forest-winch">Forest Winch</a>
+    <a href="#logic-clock">Logic Clock</a>
+  </nav>
 
   <main>
-    <section>
+    
+    <section id="about">
       <h2>About</h2>
       <p>
         EPFL Microengineering student interested in embedded systems,
         robotics, hardware design, and applied software.
       </p>
+      <div class="project-links">
+      <a href="files/pauline_de_baets.pdf" download>
+        Get CV here
+      </a>
+      </div>
     </section>
-
+  
     <section>
       <h2>Projects</h2>
     </section>
 <!-- ROCKET TEAM -->
-<section class="project-section">
+<section class="project-section" id="line-cutter">
   <div class="project-text">
     <h3>Line Cutter - EPFL Rocket Team</h3>
+
+    <div class="project-links">
+      <a href="files/ERT_recognition_letter.pdf" download>
+        Get ERT recognition letter
+      </a>
+    </div>
+
+    <h4>Date: 2024–2025</h4>
+    <h4>Project: EPFL Rocket Team Recovery System</h4>
+
+
+      <div>
+        <h4>Technologies used</h4>
+        <ul>
+          <li>Design(3D/2D) on SolidWorks</li>
+          <li>Manufacturing: Manual lathes, Drill presses, tap/ die</li>
+          <li>3D Printing using Prusa MK4 printers and PrusaSlicer </li>
+        </ul>
+      </div>
+
+
     <p>
       Designed, manufactured, iterated and tested a compact pyrotechnic line cutter
       for the EPFL Rocket Team recovery system. The device uses an e-match-triggered
       black powder charge to drive a guided blade through high-strength Dyneema
-      reefing lines, triggering the second phase of the rocket’s descent.
+      reefing lines, triggering the second phase of the rocket’s descent. 
+      The system was flown and validated at the 2025 European Rocketry Competition where the team reached second place thanks to a successful recovery.
     </p>
+
     <p>
       Several blade concepts were explored before manufacturing the final version.
       The sketches below show early cutting-edge iterations, including flat and
@@ -50,65 +94,115 @@
     </video>
   </div>
 </section>
-<section class="project-section models-row"> 
-<div class="model-container"> 
-  <model-viewer src="models/line_cutter_centered.glb" 
-  alt="3D model of the line cutter" 
-  auto-rotate camera-controls 
-  environment-image="neutral" 
-  exposure="1.4" 
-  shadow-intensity="1" 
-  camera-orbit="45deg 65deg 1m" 
-  field-of-view="30deg"> 
-</model-viewer> 
-</div> 
-<div class="model-container"> 
-  <model-viewer class="screw-model" 
-  src="models/vis_centered.glb" 
-  alt="3D model of the screw" 
-  auto-rotate camera-controls 
-  environment-image="neutral" 
-  exposure="1.4" 
-  shadow-intensity="1" 
-  camera-orbit="45deg 65deg 3m" 
-  scale="1 1 1"> 
-</model-viewer> 
-</div> 
+
+<!-- LINE CUTTER 3D MODELS -->
+<section class="project-section models-row">
+  <div class="model-container">
+    <model-viewer
+      src="models/line_cutter_centered.glb"
+      alt="3D model of the line cutter"
+      auto-rotate
+      camera-controls
+      environment-image="neutral"
+      exposure="1.4"
+      shadow-intensity="1"
+      camera-orbit="45deg 65deg 1m"
+      field-of-view="30deg">
+    </model-viewer>
+  </div>
+
+  <div class="model-container">
+    <model-viewer
+      class="screw-model"
+      src="models/vis_centered.glb"
+      alt="3D model of the screw"
+      auto-rotate
+      camera-controls
+      environment-image="neutral"
+      exposure="1.4"
+      shadow-intensity="1"
+      camera-orbit="45deg 65deg 3m"
+      scale="1 1 1">
+    </model-viewer>
+  </div>
 </section>
+
+
+<!-- LINE CUTTER DESIGN ITERATION -->
 <section class="project-section">
   <div class="project-text">
     <h3>Line Cutter Design Iteration</h3>
+
     <p>
-      The first concept used a more classical flat blade profile, while later
-      iterations moved toward a compact cylindrical body with an internal guided
-      blade. The closed and open prototype photos show the manufactured line cutter
-      body, threaded cap, side access holes, and internal cavity used to integrate
-      the blade and pyrotechnic charge.
+      The first line cutter design had threads positioned in the center of its body to allow for the positioning of the blade.
+      The blade in itself was cylindrical: it consisted of a spot drill hole with a 45° chamfer to create a cutting edge. 
+      Although not ideal, this design was necessary as we were unable to orient the blade to cut the line at 45° for our second device, which led us to the use of shear pins.
+      Additionally, the threaded cap was added to allow for a smaller, more compact and light device, as the manufacturing of the external thread with a die was only possible through the creation of a relief 
+      in the line cutter body, which resulted in a very thin wall unable to withstand black powder explosions.
     </p>
+      The second design iteration, which is the one that was manufactured and flown, included a blade with a sharper, flat, cutting edge and a more robust body with the threads positioned on the top of the device. This screw-like cap 
+      was subjected to far less stress during the explosion, allowing us to create a more compact and robust device without the need for a relief in the body. Additionally, the shear pin hole allowed the blade to always be perpendicular to the line, and 
+      was extremely easy to manufacture, as it only consisted in a pin, with two small diameters reduced with a lathe.
     <p>
-      The final architecture protects the energetic components inside the housing
-      and guides the blade along a controlled cutting path. A shear pin was included
-      to hold the blade in place before activation and to fail predictably when the
-      e-match ignites the black powder charge.
+      
     </p>
   </div>
 
-  <div class="project-gallery">
+  <div class="project-gallery full-width-gallery">
+        <img src="images/current_line_cutter.JPG" alt="Current line cutter internal design">
     <img src="images/blade_iteration.jpg" alt="Line cutter blade design iterations">
+  </div>
+</section>
+
+<!-- LINE CUTTER TEST VIDEO -->
+<section class="project-section">
+  <div class="project-text">
+    <h3>Testing</h3>
+
+    <p>
+      The video below shows an experimental validation test of the line cutter
+      mechanism among many others. The device in this test is held by a clamp and the dyneema 
+      line is not under tension, as to validate the device even in the worst-case scenario. The blade successfully cuts through the line in a repeatable way, demonstrating the reliability of the design and manufacturing process.
+    </p>
+  </div>
+
+  <div class="project-video full-width-video">
+    <video autoplay muted loop playsinline controls>
+      <source src="images/line_cutter_test.mov" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<!-- LINE CUTTER PROTOTYPE PHOTOS -->
+<section class="project-section">
+  <div class="project-text">
+    <h3>Manufactured Prototype</h3>
+
+    <p>
+      The closed and open prototype photos show the manufactured line cutter body,
+      threaded cap, side access holes, shear-pin hole and internal cavity used to integrate the
+      blade and pyrotechnic charge.
+    </p>
+  </div>
+
+  <div class="project-gallery two-column">
     <img src="images/lc_pic_closed.jpg" alt="Closed manufactured line cutter prototype">
     <img src="images/lc_pic_open.jpg" alt="Open manufactured line cutter prototype">
   </div>
 </section>
 
+<!-- LINE CUTTER INTERNAL WORKING PRINCIPLE -->
 <section class="project-section">
   <div class="project-text">
     <h3>Internal Working Principle</h3>
+
     <p>
       The internal diagrams illustrate the working principle of the device. An
       e-match is connected through copper wires and embedded in the black powder
       charge. When triggered, the pressure generated by the charge pushes the blade
       upward through the line path.
     </p>
+
     <p>
       The blade is initially constrained by a shear pin with intentionally weakened
       sections. During activation, the pin fails at these designed weak points,
@@ -118,24 +212,24 @@
   </div>
 
   <div class="project-gallery">
-    <img src="images/current_line_cutter.JPG" alt="Current line cutter internal design">
     <img src="images/old_line_cutter.jpg" alt="Previous line cutter internal design">
   </div>
 </section>
-    
 
-    <!-- CONCEPTION DE MECANISMES -->
-<section class="project-section">
+
+<!-- CONCEPTION DE MECANISMES -->
+<section class="project-section" id="flyforce">
   <div class="project-text">
     <h3>FlyForce - 3-DOF Force Sensor</h3>
-
-    
 
     <h4>Date: Spring 2025</h4>
     <h4>
       Authors: Pauline De Baets, Stanislas Dupanloup,
       Emmard Frangopoulos, Noé Ventura, Tim Vial
     </h4>
+
+      
+
 
     <p>
       FlyForce is a precision mechanical design project focused on the development
@@ -156,16 +250,22 @@
       measurement system with three controlled degrees of freedom:
       two rotations (rx, ry) and one translation (z).
     </p>
+    <p>
+      This project was devided in two main phases: The first important phase was the design of mechanisms with 3 degrees of freedom,
+      during which 4 different architectures were explored and roughly implemented (Grübler Mobility, hyperstaticism, manuacturability/feasability).
+      Each of those were then evaluated and compared to be implemented in depth in the second phase (Force and moment balancing, rigidity calculations and compensation, reduced mass, captor placement, 3D and 2D etc). 
+      Much calculations, optimization and iterations were involved to meet the specifications of the project.
+    </p>
 
     <p>
       The final mechanism achieved stiffness values close to the target
-      specification of 5 N/mm in all directions while maintaining sub-millinewton
+      specification of 5 N/mm in all directions while maintaining a highly precise
       force resolution using capacitive displacement sensors.
     </p>
 
     <p>
       This project significantly strengthened my experience in compliant mechanism
-      design, precision engineering, CAD modelling, dimensioning, balancing
+      design, precision engineering, dimensioning, balancing
       systems, and design iteration under industrial constraints.
     </p>
   </div>
@@ -177,10 +277,10 @@
     <h3>Complete Assembly</h3>
 
     <p>
-      The image below shows the complete assembly of the FlyForce sensor together
-      with its cylindrical housing. The internal structure is entirely based on
-      flexible guidance systems instead of conventional bearings, eliminating
-      friction and backlash.
+      The image below shows the complete assembly of the FlyForce sensor. 
+      The internal structure is entirely based on
+      flexible guidance systems instead of conventional bearings, greatly reducing
+      friction.
     </p>
 
     <p>
@@ -191,10 +291,6 @@
       to reconstruct the applied force.
     </p>
 
-    <p>
-      The entire architecture was designed to fit inside a compact cylindrical
-      envelope compatible with industrial metrology systems.
-    </p>
   </div>
 
   <div class="project-image">
@@ -215,8 +311,7 @@
     </p>
 
     <p>
-      Unlike classical bearings, the compliant guidance introduces no mechanical
-      friction or play. The elastic deformation of the flexures provides smooth,
+     The elastic deformation of the flexures provides smooth,
       repeatable motion while preserving very high positioning precision.
     </p>
 
@@ -309,6 +404,7 @@
       The complete set of 2D technical drawings made by Stanislas Dupanloup and Tim Vial usable for manufacturing and
       assembly is available in the downloadable folder below.
     </p>
+
     <a href="cdm_2d.zip" download>
       Download the 2D drawings zip file
     </a>
@@ -316,7 +412,7 @@
 </section>
 
     <!-- PAC-MAN ON ATMEGA128L -->
-    <section class="project-section">
+    <section class="project-section" id="pacman">
       <div class="project-text">
         <h3>Pac-Man on ATmega128L</h3>
         <a href="https://github.com/pauline-db/Pacman-ATmega128L-AVR-Assembly" target="_blank">
@@ -324,6 +420,9 @@
         </a>
         <h4>Date: Spring 2025</h4>
         <h4>Authors: Pauline De Baets, Stanislas Dupanloup</h4>
+            <div class="project-meta">
+      <div>
+
         <p>
           A Pac-Man-inspired game developed in AVR Assembly for the ATmega128L
           microcontroller board.
@@ -352,7 +451,7 @@
     </section>
 
     <!-- RADAR HAND GESTURE RECOGNITION -->
-    <section class="project-section">
+    <section class="project-section" id="radar">
       <div class="project-text">
         <h3>Radar Gesture Recognition</h3>
 
@@ -361,7 +460,7 @@
         </a>
 
         <h4>Date: October 2025</h4>
-        <h4>Author: Pauline De Baets</h4>
+        <h4>Authors: Pauline De Baets, Omar Ben Omar</h4>
 
         <p>
           Radar-based hand gesture recognition using micro-Doppler signatures and
@@ -419,7 +518,7 @@
     </section>
 
     <!-- MICRORECIF -->
-    <section class="project-section">
+    <section class="project-section" id="microrecif">
       <div class="project-text">
         <h3>Microrecif Simulation</h3>
         <a href="https://github.com/pauline-db/Project-Microrecif" target="_blank">
@@ -439,7 +538,7 @@
     </section>
 
     <!-- LINE FOLLOWING ROBOT -->
-    <section class="project-section">
+    <section class="project-section" id="line-robot">
       <div class="project-text">
         <h3>Line Following Robot</h3>
         <a href="https://github.com/pauline-db/embedded-software-robot" target="_blank">
@@ -464,7 +563,7 @@
     </section>
 
     <!-- CONSTRUCTION MECANIQUE -->
-<section class="project-section construction-section">
+<section class="project-section construction-section" id="forest-winch">
   <div class="project-text">
     <h3>Mechanical Construction - Forest Winch</h3>
     <h4>Date: Spring 2024</h4>
@@ -525,17 +624,16 @@
   </div>
 </section>
 <!-- LOGIC SYSTEMS CLOCK -->
-<section class="project-section">
+<section class="project-section" id="logic-clock">
   <div class="project-text">
     <h3>Digital Clock with Logic Systems</h3>
 
-    <a href="https://github.com/pauline-db/REPOSITORY-NAME" target="_blank">
-      View this project on GitHub
-    </a>
+    <!--a href="https://github.com/pauline-db/REPOSITORY-NAME" target="_blank">
+      <View this project on GitHub
+    </a> -->
 
     <h4>Date: Spring 2024</h4>
     <h4>Authors: Pauline De Baets and Regina Beytrison</h4>
-
     <p>
       This project consisted of designing a digital clock system in Logisim using
       finite state machines, counters, registers, logic gates, seven-segment displays,
@@ -591,7 +689,8 @@
       </p>
     </section>
   </main>
-
+  </main>
+</div>
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll("model-viewer").forEach((viewer) => {
