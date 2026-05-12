@@ -7,14 +7,14 @@
   <link rel="stylesheet" href="style.css" />
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
+
 <body>
   <header>
     <h1>Pauline De Baets</h1>
-    <p> PROJECTS</p>
+    <p>Projects</p>
   </header>
 
   <main>
-
     <section>
       <h2>About</h2>
       <p>
@@ -22,228 +22,570 @@
         robotics, hardware design, and applied software.
       </p>
     </section>
-  <!-- ROCKET TEAM -->
+
     <section>
       <h2>Projects</h2>
-      <section class="project-section">
-        <div class="project-text">
-          <h3>Line Cutter - EPFL Rocket Team</h3>
-          <p>Designed, manufactured, iterated and tested a compact pyrotechnic device using an e-match–triggered charge and a guided blade to cut high-strength Dyneema reefing lines, triggering the second phase of the rocket’s descent.</p>
-          <p>The video on the right shows an onboard camera feed of a test launch in which different sub-systems were tested. The Recovery team is responsible for the safe retrieval of the rocket after its flight, and the video shows the line cutter triggering the second phase of the rocket’s descent.</p>
-        </div>
-        <div class="project-video">
-          <center>
-            <video autoplay muted loop playsinline width="400" height="300" controls>
-              <source src="images/rocket_test_launch.mp4" type="video/mp4">
-            </video>
-          </center>
-        </div>
-  
-      </section>
-    <section class="project-section">
-        <div class="model-container">
-        <model-viewer
-          src="models/line_cutter_centered.glb"  
-        >
-        </model-viewer>
-      </div>
-      <div class="model-container">
-        <model-viewer
-          src="models/vis_centered.glb"  
-        >
-        </model-viewer>
-      </div>
-      </section>
-  <!-- CONCEPTION DE MECHANISMES -->
-<h3>FlyForce - 3-DOF Force Sensor</h3>
-<h4>Date: Spring 2025</h4>
-<h4>Author: Pauline De Baets, Stanislas Dupanloup,
-Emmard Frangopoulos, Noé Ventura, Tim Vial </h4>
-    <section class="project-section">
-      <div class="project-text">
-        
-          <p>
-            FlyForce is a mechanical design project focused on the development of a
-            three-degree-of-freedom force sensor based on flexure mechanisms. The sensor
-            was designed to measure the contact force between a spherical stylus tip and
-            a part in all directions, while minimizing sensitivity to gravity and base
-            accelerations.
-          </p>
-
-          <p>
-            The mechanism uses elastic deformation, compliant guides, force and moment
-            balancing, and capacitive displacement sensing to estimate the applied force.
-            The final concept includes a flexible guiding system allowing two rotations
-            and one translation, as well as balancing mechanisms designed to improve
-            reliability and measurement stability.
-          </p>
-
-          <p>
-            Through analytical dimensioning and CAD-based design, the project achieved
-            stiffness values close to the target of 5 N/mm in all three directions, with
-            force resolutions below the required 1.5 mN. This project strengthened my
-            experience in compliant mechanism design, precision engineering, CAD,
-            mechanical modelling, and design iteration under industrial constraints.
-          </p>
-      </div>
-      
-    </section> 
-
-  <!-- PAC-MAN ON ATMEGA128L -->
-      <section class="project-section">
-        <div class="project-text">
-          <h3>Pac-Man on ATmega128L</h3>
-          <a href="https://github.com/pauline-db/Pacman-ATmega128L-AVR-Assembly" target="_blank">
-          View this project on GitHub
-          </a>
-          <h4>Date: Spring 2025</h4>
-          <h4>Authors: Pauline De Baets, Stanislas Dupanloup</h4>
-          <p>A Pac-Man-inspired game developed in AVR Assembly for the ATmega128L microcontroller board.</p>
-          <p>The game runs on an 8×8 WS2812B LED matrix, uses an LCD 2×16 to display the menu and score, a PS/2 keyboard for menu navigation, push buttons for player movement, and the internal EEPROM to store high scores.</p>
-          <p>The video on the right shows a demonstration of the game, where players move through the maze, collect bonuses, avoid or eat enemies, and reach the green exit. After completing the first level, the game automatically starts a second, harder level. When the second level is completed, a green check mark is displayed on the LED matrix. The video only shows the led matrix forthe first part of the game, where the player (yellow) navigates the maze, collects a bonus (dark blue) to eat the enemy (red). He then proceeds to exit the first level and starts the second.</p>
-        </div>
-        <div class="media-section">
-          <img class="photo" src="images/pacman.jpg" alt="Pac-Man on ATmega128L">
-          <center>
-            <video class="video" autoplay muted loop playsinline width="400" height="300" controls>
-              <source src="images/pacman_vid.mov" type="video/mp4">
-            </video>
-          </center>
-            
-        </div>
-      </section>
-  <!-- RADAR HAND GESTURE RECOGNITION -->
-      
-      <section class="project-section">
+    </section>
+<!-- ROCKET TEAM -->
+<section class="project-section">
   <div class="project-text">
-    <h3>Radar Gesture Recognition</h3>
-
-    <a href="https://github.com/pauline-db/Machine-Learning-Radar-Based-Hand-gesture-recognition" target="_blank">
-      View this project on GitHub
-    </a>
-
-    <h4>Date: October 2025</h4>
-    <h4>Author: Pauline De Baets</h4>
+    <h3>Line Cutter - EPFL Rocket Team</h3>
     <p>
-      Radar-based hand gesture recognition using micro-Doppler signatures and machine learning
-      using a dataset of four different hand gestures: click, pinch, swipe, and wave from
-      6 different participants. This project compares Chebyshev moments and micro-Doppler
-      envelope features for classifying four hand gestures.
+      Designed, manufactured, iterated and tested a compact pyrotechnic line cutter
+      for the EPFL Rocket Team recovery system. The device uses an e-match-triggered
+      black powder charge to drive a guided blade through high-strength Dyneema
+      reefing lines, triggering the second phase of the rocket’s descent.
     </p>
+    <p>
+      Several blade concepts were explored before manufacturing the final version.
+      The sketches below show early cutting-edge iterations, including flat and
+      revolved blade geometries, with the goal of improving line capture, cutting
+      efficiency, and reliability.
+    </p>
+  </div>
 
-    <div class="table-container">
-      <table class="results-table">
-        <thead>
-          <tr>
-            <th>Feature Extraction Method</th>
-            <th>Classifier</th>
-            <th>Best Accuracy</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>Chebyshev Moments</td>
-            <td>k-NN</td>
-            <td>88.65%</td>
-          </tr>
-          <tr>
-            <td>Chebyshev Moments</td>
-            <td>1D CNN</td>
-            <td>86.31%</td>
-          </tr>
-          <tr>
-            <td>Chebyshev Moments</td>
-            <td>Quadratic SVM</td>
-            <td>83.05%</td>
-          </tr>
-          <tr>
-            <td>Micro-Doppler Envelopes</td>
-            <td>k-NN</td>
-            <td>67.0%</td>
-          </tr>
-          <tr>
-            <td>Micro-Doppler Envelopes</td>
-            <td>Linear SVM</td>
-            <td>65.1%</td>
-          </tr>
-          <tr>
-            <td>Micro-Doppler Envelopes</td>
-            <td>Logistic Regression</td>
-            <td>65.1%</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="project-video">
+    <video autoplay muted loop playsinline controls>
+      <source src="images/rocket_test_launch.mp4" type="video/mp4">
+    </video>
   </div>
 </section>
 
-  <!-- MICRORECIF -->
-      <section class="project-section">
-        <div class="project-text">
-          <h3>Microrecif simulation</h3>
-          <a href="https://github.com/pauline-db/Project-Microrecif  " target="_blank">
-            View this project on GitHub
-          </a>
-          <h4>Date: April 2024</h4>
-          <h4>Authors: Pauline De Baets, Lina Ben Sayah</h4>
-          <p>C++/GTKmm simulation of a micro-reef ecosystem with algae, corals, scavengers, collision handling, and step-by-step graphical visualization.</p>
-        </div>
-        <div class="project-image">
-          <center>
-            <img src="images/microrécif.jpg" alt="Microrecif simulation" width="400" height="300">
-          </center>
-      </section>
-      </section>
+<section class="project-section">
+  <div class="project-text">
+    <h3>Line Cutter Design Iteration</h3>
+    <p>
+      The first concept used a more classical flat blade profile, while later
+      iterations moved toward a compact cylindrical body with an internal guided
+      blade. The closed and open prototype photos show the manufactured line cutter
+      body, threaded cap, side access holes, and internal cavity used to integrate
+      the blade and pyrotechnic charge.
+    </p>
+    <p>
+      The final architecture protects the energetic components inside the housing
+      and guides the blade along a controlled cutting path. A shear pin was included
+      to hold the blade in place before activation and to fail predictably when the
+      e-match ignites the black powder charge.
+    </p>
+  </div>
+
+  <div class="project-gallery">
+    <img src="images/blade_iteration.jpg" alt="Line cutter blade design iterations">
+    <img src="images/lc_pic_closed.jpg" alt="Closed manufactured line cutter prototype">
+    <img src="images/lc_pic_open.jpg" alt="Open manufactured line cutter prototype">
+  </div>
+</section>
+
+<section class="project-section">
+  <div class="project-text">
+    <h3>Internal Working Principle</h3>
+    <p>
+      The internal diagrams illustrate the working principle of the device. An
+      e-match is connected through copper wires and embedded in the black powder
+      charge. When triggered, the pressure generated by the charge pushes the blade
+      upward through the line path.
+    </p>
+    <p>
+      The blade is initially constrained by a shear pin with intentionally weakened
+      sections. During activation, the pin fails at these designed weak points,
+      allowing the blade to travel and cut the reefing line in a controlled and
+      repeatable way.
+    </p>
+  </div>
+
+  <div class="project-gallery">
+    <img src="images/current_line_cutter.JPG" alt="Current line cutter internal design">
+    <img src="images/old_line_cutter.jpg" alt="Previous line cutter internal design">
+  </div>
+</section>
     
-<!-- LINE FOLLOWING ROBOT -->
-      </section>
-      <section class="project-section">
-        <div class="project-text">
-          <h3>Line following robot</h3>
-          <a href="https://github.com/pauline-db/embedded-software-robot " target="_blank">
-            View this project on GitHub
-          </a>
-          <h4>Date: Spring 2026</h4>
-          <h4>Author: Pauline De Baets</h4>
-          <p>Line follower robot with line following, object avoidance, and distance tracking capabilities. Integrated as an FSM with a main that enables the state transitions for the different assignment modes : speed variation, obstacle detection, line following, obstacle avoidance, and finally distance measurements.</p>
-        </div>
-        <div class="project-video">
-          <center>
-            <video autoplay muted loop playsinline width="400" height="300" controls>
-              <source src="images/robot_vid.mov" type="video/mp4">
-            </video>
-          </center>
-        </div>
-      </section>
-      </section>
-<!-- CONSTRUCTION MECANIQUE -->
-      <section class="project-section">
-        <div class="project-text">
-          <h3>Mechanical Construction</h3>
-          <h4>Date: Spring 2024</h4>
-          <h4>Author: Pauline De Baets, Eileen Rheinboldt-tran, Lina Ben Sayah, Orjowane Kaki</h4>
-        </div>
-        <div class="model-container">
-        <model-viewer
-          src="models/treuil_de_foret_centered.glb"
-          auto-rotate
-          camera-controls
-          shadow-intensity="1"
-          exposure="1"
-          camera-orbit="45deg 65deg 1m"
-          field-of-view="30deg">
-        
-        </model-viewer>
+
+    <!-- CONCEPTION DE MECANISMES -->
+<section class="project-section">
+  <div class="project-text">
+    <h3>FlyForce - 3-DOF Force Sensor</h3>
+
+    
+
+    <h4>Date: Spring 2025</h4>
+    <h4>
+      Authors: Pauline De Baets, Stanislas Dupanloup,
+      Emmard Frangopoulos, Noé Ventura, Tim Vial
+    </h4>
+
+    <p>
+      FlyForce is a precision mechanical design project focused on the development
+      of a three-degree-of-freedom force sensor based entirely on compliant
+      mechanisms and flexible guidance systems.
+    </p>
+
+    <p>
+      The objective was to design a probe capable of measuring the contact force
+      between a stylus and a part in all spatial directions while remaining
+      insensitive to gravity orientation, linear accelerations, and rotational
+      disturbances of the base.
+    </p>
+
+    <p>
+      The mechanism combines compliant membranes, force and moment balancing,
+      capacitive sensing, and elastic deformation to create a frictionless
+      measurement system with three controlled degrees of freedom:
+      two rotations (rx, ry) and one translation (z).
+    </p>
+
+    <p>
+      The final mechanism achieved stiffness values close to the target
+      specification of 5 N/mm in all directions while maintaining sub-millinewton
+      force resolution using capacitive displacement sensors.
+    </p>
+
+    <p>
+      This project significantly strengthened my experience in compliant mechanism
+      design, precision engineering, CAD modelling, dimensioning, balancing
+      systems, and design iteration under industrial constraints.
+    </p>
+  </div>
+</section>
+
+<!-- OVERVIEW IMAGE -->
+<section class="project-section">
+  <div class="project-text">
+    <h3>Complete Assembly</h3>
+
+    <p>
+      The image below shows the complete assembly of the FlyForce sensor together
+      with its cylindrical housing. The internal structure is entirely based on
+      flexible guidance systems instead of conventional bearings, eliminating
+      friction and backlash.
+    </p>
+
+    <p>
+      The lower section contains the stylus support and compliant membrane used
+      for the probe guidance. The upper section contains the balancing mass and
+      the force/moment balancing mechanisms. Capacitive sensors positioned around
+      the moving bodies measure the small deformations of the mechanism in order
+      to reconstruct the applied force.
+    </p>
+
+    <p>
+      The entire architecture was designed to fit inside a compact cylindrical
+      envelope compatible with industrial metrology systems.
+    </p>
+  </div>
+
+  <div class="project-image">
+    <img src="images/cdm_overview.png" alt="FlyForce complete assembly">
+  </div>
+</section>
+
+<!-- 3 DOF GUIDANCE -->
+<section class="project-section">
+  <div class="project-text">
+    <h3>3-DOF Flexible Guidance</h3>
+
+    <p>
+      The probe guidance system is based on compliant membranes implemented using
+      three equatorial flexure rods. This configuration constrains the mechanism
+      to exactly three useful degrees of freedom:
+      rotations around x and y, and translation along z.
+    </p>
+
+    <p>
+      Unlike classical bearings, the compliant guidance introduces no mechanical
+      friction or play. The elastic deformation of the flexures provides smooth,
+      repeatable motion while preserving very high positioning precision.
+    </p>
+
+    <p>
+      This guidance architecture was one of the key elements enabling isotropic
+      stiffness behaviour and accurate force measurements in all directions.
+    </p>
+  </div>
+
+  <div class="project-image">
+    <img src="images/guidage_3ddl.png" alt="3-DOF compliant guidance">
+  </div>
+</section>
+
+<!-- FORCE BALANCING -->
+<section class="project-section">
+  <div class="project-text">
+    <h3>Force Balancing Mechanism</h3>
+
+    <p>
+      One of the major challenges of the project was making the sensor insensitive
+      to gravity orientation and base accelerations.
+    </p>
+
+    <p>
+      The mechanism shown below implements the balancing system for the z-axis
+      translation. Two slender rods connect the moving probe assembly to a central
+      inversion lever mounted on a compliant pivot.
+    </p>
+
+    <p>
+      When the stylus moves upward, the balancing mass moves downward with an
+      opposite displacement. This compensates the forces generated by gravity and
+      significantly reduces parasitic effects during operation.
+    </p>
+
+    <p>
+      The balancing mechanism was carefully dimensioned to preserve the required
+      compliance while minimizing added stiffness and assembly complexity.
+    </p>
+  </div>
+
+  <div class="project-image">
+    <img src="images/equilibre_en_forces.png" alt="Force balancing mechanism">
+  </div>
+</section>
+
+<!-- MOMENT BALANCING -->
+<section class="project-section">
+  <div class="project-text">
+    <h3>Moment Balancing System</h3>
+
+    <p>
+      The rotational balancing system compensates angular moments generated during
+      probe motion around the x and y axes.
+    </p>
+
+    <p>
+      The two main moving masses are connected through three compliant L-shaped
+      flexures arranged at 120°. These flexures force the balancing mass to rotate
+      in the opposite direction of the probe assembly while still allowing
+      independent translation along z.
+    </p>
+
+    <p>
+      This architecture enabled rotational balancing without introducing additional
+      friction or overconstraining the mechanism. It also represented one of the
+      most original aspects of the project because it combines rotational inversion
+      and translational filtering in a compact compliant structure.
+    </p>
+
+    <p>
+      Significant design effort was dedicated to the geometry, positioning, and
+      stiffness optimization of these flexures in order to achieve the target
+      rotational stiffness while maintaining manufacturability.
+    </p>
+  </div>
+
+  <div class="project-image">
+    <img src="images/equilibre_en_moments.png" alt="Moment balancing mechanism">
+  </div>
+</section>
+
+<!-- MECHANICAL DRAWINGS -->
+<section class="project-section">
+  <div class="project-text">
+    <h3>Mechanical Drawings</h3>
+
+    <p>
+      The complete set of 2D technical drawings made by Stanislas Dupanloup and Tim Vial usable for manufacturing and
+      assembly is available in the downloadable folder below.
+    </p>
+    <a href="cdm_2d.zip" download>
+      Download the 2D drawings zip file
+    </a>
+  </div>
+</section>
+
+    <!-- PAC-MAN ON ATMEGA128L -->
+    <section class="project-section">
+      <div class="project-text">
+        <h3>Pac-Man on ATmega128L</h3>
+        <a href="https://github.com/pauline-db/Pacman-ATmega128L-AVR-Assembly" target="_blank">
+          View this project on GitHub
+        </a>
+        <h4>Date: Spring 2025</h4>
+        <h4>Authors: Pauline De Baets, Stanislas Dupanloup</h4>
+        <p>
+          A Pac-Man-inspired game developed in AVR Assembly for the ATmega128L
+          microcontroller board.
+        </p>
+        <p>
+          The game runs on an 8×8 WS2812B LED matrix, uses an LCD 2×16 to display
+          the menu and score, a PS/2 keyboard for menu navigation, push buttons for
+          player movement, and the internal EEPROM to store high scores.
+        </p>
+        <p>
+          The video on the right shows a demonstration of the game, where players
+          move through the maze, collect bonuses, avoid or eat enemies, and reach the
+          green exit. After completing the first level, the game automatically starts
+          a second, harder level. When the second level is completed, a green check
+          mark is displayed on the LED matrix.
+        </p>
       </div>
-      </section>
+
+      <div class="media-section">
+        <img class="photo" src="images/pacman.jpg" alt="Pac-Man on ATmega128L">
+
+        <video class="video" autoplay muted loop playsinline controls>
+          <source src="images/pacman_vid.mov" type="video/mp4">
+        </video>
+      </div>
     </section>
 
-    <section>
-      <center>
-      <p>Email - <a href="mailto:pauline.debaets@epfl.ch">pauline.debaets@epfl.ch</a> - LinkedIn - <a href="https://linkedin.com/in/pauline-de-baets">pauline-de-baets</a> - GitHub - <a href="https://github.com/pauline-db">pauline-db</a></p>
-      </center>
+    <!-- RADAR HAND GESTURE RECOGNITION -->
+    <section class="project-section">
+      <div class="project-text">
+        <h3>Radar Gesture Recognition</h3>
+
+        <a href="https://github.com/pauline-db/Machine-Learning-Radar-Based-Hand-gesture-recognition" target="_blank">
+          View this project on GitHub
+        </a>
+
+        <h4>Date: October 2025</h4>
+        <h4>Author: Pauline De Baets</h4>
+
+        <p>
+          Radar-based hand gesture recognition using micro-Doppler signatures and
+          machine learning using a dataset of four different hand gestures: click,
+          pinch, swipe, and wave from 6 different participants. This project compares
+          Chebyshev moments and micro-Doppler envelope features for classifying four
+          hand gestures.
+        </p>
+
+        <div class="table-container">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Feature Extraction Method</th>
+                <th>Classifier</th>
+                <th>Best Accuracy</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Chebyshev Moments</td>
+                <td>k-NN</td>
+                <td>88.65%</td>
+              </tr>
+              <tr>
+                <td>Chebyshev Moments</td>
+                <td>1D CNN</td>
+                <td>86.31%</td>
+              </tr>
+              <tr>
+                <td>Chebyshev Moments</td>
+                <td>Quadratic SVM</td>
+                <td>83.05%</td>
+              </tr>
+              <tr>
+                <td>Micro-Doppler Envelopes</td>
+                <td>k-NN</td>
+                <td>67.0%</td>
+              </tr>
+              <tr>
+                <td>Micro-Doppler Envelopes</td>
+                <td>Linear SVM</td>
+                <td>65.1%</td>
+              </tr>
+              <tr>
+                <td>Micro-Doppler Envelopes</td>
+                <td>Logistic Regression</td>
+                <td>65.1%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- MICRORECIF -->
+    <section class="project-section">
+      <div class="project-text">
+        <h3>Microrecif Simulation</h3>
+        <a href="https://github.com/pauline-db/Project-Microrecif" target="_blank">
+          View this project on GitHub
+        </a>
+        <h4>Date: April 2024</h4>
+        <h4>Authors: Pauline De Baets, Lina Ben Sayah</h4>
+        <p>
+          C++/GTKmm simulation of a micro-reef ecosystem with algae, corals,
+          scavengers, collision handling, and step-by-step graphical visualization.
+        </p>
+      </div>
+
+      <div class="project-image">
+        <img src="images/microrécif.jpg" alt="Microrecif simulation">
+      </div>
+    </section>
+
+    <!-- LINE FOLLOWING ROBOT -->
+    <section class="project-section">
+      <div class="project-text">
+        <h3>Line Following Robot</h3>
+        <a href="https://github.com/pauline-db/embedded-software-robot" target="_blank">
+          View this project on GitHub
+        </a>
+        <h4>Date: Spring 2026</h4>
+        <h4>Author: Pauline De Baets</h4>
+        <p>
+          Line follower robot with line following, object avoidance, and distance
+          tracking capabilities. Integrated as an FSM with a main that enables the
+          state transitions for the different assignment modes: speed variation,
+          obstacle detection, line following, obstacle avoidance, and finally distance
+          measurements.
+        </p>
+      </div>
+
+      <div class="project-video">
+        <video autoplay muted loop playsinline controls>
+          <source src="images/robot_vid.mov" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <!-- CONSTRUCTION MECANIQUE -->
+<section class="project-section construction-section">
+  <div class="project-text">
+    <h3>Mechanical Construction - Forest Winch</h3>
+    <h4>Date: Spring 2024</h4>
+    <h4>
+      Authors: Pauline De Baets, Eileen Rheinboldt-Tran,
+      Lina Ben Sayah, Orjowane Kaki
+    </h4>
+
+    <p>
+      This project consisted of designing a manually operated forest winch
+      mechanism, including the external casing, internal transmission, drum,
+      shaft supports, gear train, crank interface, and lifting hook system.
+    </p>
+
+    <p>
+      The CAD model shows the full assembly with transparent side panels to reveal
+      the internal mechanism. The crank drives a shaft connected to the gear train,
+      which transmits torque to the drum and winds the cable used to lift or pull
+      a load.
+    </p>
+
+    <p>
+      The project focused on mechanical construction principles, functional
+      integration, assembly constraints, load transmission, component placement,
+      and the design of a robust structure around moving mechanical parts.
+    </p>
+  </div>
+
+  <div class="model-container">
+    <model-viewer
+      src="models/treuil_de_foret_centered.glb"
+      alt="3D model of the mechanical construction project"
+      auto-rotate
+      camera-controls
+      environment-image="neutral"
+      exposure="1.4"
+      shadow-intensity="1"
+      camera-orbit="45deg 65deg 1.5m"
+      field-of-view="35deg">
+    </model-viewer>
+  </div>
+</section>
+
+<section class="project-section">
+  <div class="project-text">
+    <h3>Internal Mechanism</h3>
+    <p>
+      These views highlight the inside of the winch: the drum, shaft, gear system,
+      crank connection, casing panels, and cable path. The top view makes the
+      transmission layout clearer, showing how the input motion from the handle is
+      redirected through the internal shaft and gears before reaching the drum.
+    </p>
+  </div>
+
+  <div class="project-gallery">
+    <img src="images/treuil_inside.png" alt="Forest winch internal CAD view">
+    <img src="images/treuil_inside_top.png" alt="Forest winch top internal CAD view">
+  </div>
+</section>
+<!-- LOGIC SYSTEMS CLOCK -->
+<section class="project-section">
+  <div class="project-text">
+    <h3>Digital Clock with Logic Systems</h3>
+
+    <a href="https://github.com/pauline-db/REPOSITORY-NAME" target="_blank">
+      View this project on GitHub
+    </a>
+
+    <h4>Date: Spring 2024</h4>
+    <h4>Authors: Pauline De Baets and Regina Beytrison</h4>
+
+    <p>
+      This project consisted of designing a digital clock system in Logisim using
+      finite state machines, counters, registers, logic gates, seven-segment displays,
+      LEDs, DIP switches, push buttons, and a rotary encoder. The circuit includes an
+      autonomous main clock as well as several independent features accessible through
+      a menu.
+    </p>
+
+    <p>
+      The additional modules include an alarm, a stopwatch, a countdown timer, a music
+      mode with scrolling messages, and a memory game where the user reproduces a
+      pattern displayed on LEDs. The system was designed around multiple finite state
+      machines, including Moore, Mealy, and Medvedev-style machines, depending on the
+      interaction between the current state, user inputs, and circuit outputs.
+    </p>
+
+    <p>
+      A major part of the project involved handling real hardware-like behavior, such
+      as rotary encoder signal interpretation, rising-edge detection, push-button
+      stabilization, and frequency-related issues. To make the circuit more reliable,
+      we implemented filtering, one-bit counters for button state memory, separate
+      clock frequencies for different parts of the circuit, and timed counters for the
+      LED memory game.
+    </p>
+
+    <p>
+      This project strengthened my understanding of digital logic design, finite state
+      machines, synchronous systems, user-input handling, debugging, and the practical
+      limitations that appear when a logical design must interact with real signals.
+    </p>
+
+    <div class="project-links">
+      <a href="raw files/project_G055.circ" download>
+        Download Logisim circuit
+      </a>
+    </div>
+  </div>
+
+  <div class="project-gallery">
+    <img src="images/logic_clock_overview.png" alt="Overview of the digital clock circuit">
+    <img src="images/logic_clock_encoder.png" alt="Rotary encoder logic circuit">
+    <img src="images/logic_clock_game.png" alt="LED memory game counter logic">
+  </div>
+</section>
+    <section class="contact-section">
+      <p>
+        Email -
+        <a href="mailto:pauline.debaets@epfl.ch">pauline.debaets@epfl.ch</a>
+        - LinkedIn -
+        <a href="https://linkedin.com/in/pauline-de-baets" target="_blank">pauline-de-baets</a>
+        - GitHub -
+        <a href="https://github.com/pauline-db" target="_blank">pauline-db</a>
+      </p>
     </section>
   </main>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("model-viewer").forEach((viewer) => {
+        viewer.addEventListener("load", () => {
+          const model = viewer.model;
+          if (!model) return;
+
+          model.materials.forEach((material) => {
+            const pbr = material.pbrMetallicRoughness;
+            if (!pbr) return;
+
+            pbr.setBaseColorFactor([0.3, 0.3, 0.3, 1]);
+            pbr.setMetallicFactor(0.8);
+            pbr.setRoughnessFactor(0.35);
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
