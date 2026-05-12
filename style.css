@@ -1,12 +1,4 @@
-body {
-  font-family: Arial, sans-serif;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 30px 20px;
-  line-height: 1.6;
-  color: #E9D4C3;
-  background: #0E141C;
-}
+
 
 header {
   padding: 90px 50px 70px 50px;
@@ -76,17 +68,21 @@ a:hover {
   min-width: 0;
 }
 
-.project-image,
+.project-image{
+  flex: 1 1 420px;
+  max-width: 420px;
+}
+
 .project-video {
-  flex: 0 0 320px;
+  flex: 1 1 420px;
+  max-width: 420px;
 }
 
 .project-image img,
 .project-video video {
-  width: 320px;
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 16px;
   display: block;
 }
@@ -308,9 +304,11 @@ body {
   display: grid;
   grid-template-columns: 180px minmax(0, 1fr);
   gap: 32px;
-  max-width: 1350px;
-  margin: 0 auto;
-  padding: 0 24px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .sidebar {
@@ -326,6 +324,7 @@ body {
 }
 
 main {
+  width: 100%;
   min-width: 0;
 }
 
