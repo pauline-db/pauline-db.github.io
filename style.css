@@ -38,7 +38,13 @@ h3 {
 h4 {
   font-size: 1rem;
   margin-bottom: 8px;
-  color: #633d43;
+  color: #7d7585;
+}
+
+h5{
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #c99379;
 }
 
 section {
