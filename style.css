@@ -93,6 +93,13 @@ a:hover {
   display: block;
 }
 
+.project-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 20px 0;
+}
+
 .media-section {
   display: flex;
   flex-direction: column;
@@ -239,12 +246,7 @@ model-viewer {
     width: 100%;
   }
 }
-.project-meta {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin: 20px 0;
-}
+
 
 .project-meta h4 {
   margin-bottom: 8px;
@@ -355,5 +357,264 @@ header {
     overflow-x: auto;
     white-space: nowrap;
     margin-bottom: 24px;
+  }
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN FIXES */
+/* ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+model-viewer {
+  max-width: 100%;
+}
+
+/* ========================= */
+/* TABLET / IPAD */
+/* Keep text and image side by side */
+/* ========================= */
+
+@media (max-width: 1024px) and (min-width: 701px) {
+  body {
+    padding: 24px 16px;
+  }
+
+  header {
+    padding: 70px 20px 50px 20px;
+  }
+
+  header h1 {
+    font-size: 3.6rem;
+  }
+
+  .page-layout {
+    display: block;
+    padding: 0 16px;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #0E141C;
+    border-right: none;
+    border-bottom: 1px solid #273241;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 12px 16px;
+    margin: 0 -16px 24px -16px;
+  }
+
+  .sidebar a {
+    flex: 0 0 auto;
+  }
+
+  .project-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .project-text {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .project-image,
+  .project-video,
+  .project-gallery,
+  .model-container,
+  .media-section {
+    flex: 1 1 50%;
+    max-width: 50%;
+    width: auto;
+  }
+
+  .project-image img,
+  .project-video video,
+  .project-gallery img,
+  .photo,
+  .video,
+  model-viewer {
+    width: 100%;
+  }
+
+  model-viewer {
+    height: 340px;
+  }
+}
+
+/* ========================= */
+/* IPHONE */
+/* Stack vertically only on small screens */
+/* ========================= */
+
+@media (max-width: 700px) {
+  body {
+    padding: 18px 14px;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  header {
+    padding: 48px 0 36px 0;
+    margin-bottom: 24px;
+  }
+
+  header h1 {
+    font-size: clamp(2.3rem, 13vw, 3.2rem);
+    letter-spacing: -1px;
+  }
+
+  header p {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+  }
+
+  .page-layout {
+    display: block;
+    padding: 0;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #0E141C;
+    border-right: none;
+    border-bottom: 1px solid #273241;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 12px 16px;
+    margin: 0 -14px 24px -14px;
+  }
+
+  .sidebar a {
+    flex: 0 0 auto;
+  }
+
+  .project-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    margin: 28px 0;
+  }
+
+  .project-text,
+  .project-image,
+  .project-video,
+  .project-gallery,
+  .model-container,
+  .media-section {
+    width: 100%;
+    max-width: none;
+    flex: none;
+  }
+
+  .project-image img,
+  .project-video video,
+  .project-gallery img,
+  .photo,
+  .video {
+    width: 100%;
+  }
+
+  .models-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  model-viewer {
+    width: 100%;
+    height: 280px;
+  }
+
+  .project-meta,
+  .project-gallery.two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .project-links a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .results-table {
+    min-width: 600px;
+  }
+}
+
+/* ========================= */
+/* LADYBUG EASTER EGG */
+/* ========================= */
+
+.ladybug {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  font-size: 38px;
+  z-index: 9999;
+  cursor: pointer;
+  user-select: none;
+  offset-path: path("M 0 0 C -25vw -75vh, -85vw 20vh, -125vw -85vh");
+  offset-distance: 0%;
+
+}
+
+.ladybug:hover {
+  transform: scale(1.15) rotate(8deg);
+}
+
+.ladybug.flying {
+  animation: ladybug-fly-out 5s cubic-bezier(0.45, 0, 0.55, 1) forwards;
+}
+
+.ladybug.flying {
+  animation: ladybug-fly-out 5s ease-in-out forwards;
+}
+
+@keyframes ladybug-fly-out {
+  0% {
+    transform: translate(0, 0) scale(0.8) rotate(0deg);
+    opacity: 1;
+  }
+  20% {
+    transform: translate(0, 0) scale(1.2) rotate(-45deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-120vw, -80vh) scale(0.3) rotate(-45deg);
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .ladybug {
+    right: 20px;
+    bottom: 20px;
+    font-size: 32px;
   }
 }

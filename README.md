@@ -24,9 +24,6 @@ Planned updates include:
 - Adding more images, videos, and descriptions
 - Cleaning up the code structure
 
-## How to View the Website
-
-Open the `index.html` file in a browser, or visit the live version if it has been deployed through GitHub Pages.
 
 ## Project Structure
 

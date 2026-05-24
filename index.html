@@ -413,42 +413,42 @@
 
     <!-- PAC-MAN ON ATMEGA128L -->
     <section class="project-section" id="pacman">
-      <div class="project-text">
-        <h3>Pac-Man on ATmega128L</h3>
-        <a href="https://github.com/pauline-db/Pacman-ATmega128L-AVR-Assembly" target="_blank">
-          View this project on GitHub
-        </a>
-        <h4>Date: Spring 2025</h4>
-        <h4>Authors: Pauline De Baets, Stanislas Dupanloup</h4>
-            <div class="project-meta">
-      <div>
+  <div class="project-text">
+    <h3>Pac-Man on ATmega128L</h3>
 
-        <p>
-          A Pac-Man-inspired game developed in AVR Assembly for the ATmega128L
-          microcontroller board.
-        </p>
-        <p>
-          The game runs on an 8×8 WS2812B LED matrix, uses an LCD 2×16 to display
-          the menu and score, a PS/2 keyboard for menu navigation, push buttons for
-          player movement, and the internal EEPROM to store high scores.
-        </p>
-        <p>
-          The video on the right shows a demonstration of the game, where players
-          move through the maze, collect bonuses, avoid or eat enemies, and reach the
-          green exit. After completing the first level, the game automatically starts
-          a second, harder level. When the second level is completed, a green check
-          mark is displayed on the LED matrix.
-        </p>
-      </div>
+    <a href="https://github.com/pauline-db/Pacman-ATmega128L-AVR-Assembly" target="_blank">
+      View this project on GitHub
+    </a>
 
-      <div class="media-section">
-        <img class="photo" src="images/pacman.jpg" alt="Pac-Man on ATmega128L">
+    <h4>Date: Spring 2025</h4>
+    <h4>Authors: Pauline De Baets, Stanislas Dupanloup</h4>
 
-        <video class="video" autoplay muted loop playsinline controls>
-          <source src="images/pacman_vid.mov" type="video/mp4">
-        </video>
-      </div>
-    </section>
+    <p>
+      A Pac-Man-inspired game developed in AVR Assembly for the ATmega128L
+      microcontroller board.
+    </p>
+
+    <p>
+      The game runs on an 8×8 WS2812B LED matrix, uses an LCD 2×16 to display
+      the menu and score, a PS/2 keyboard for menu navigation, push buttons for
+      player movement, and the internal EEPROM to store high scores.
+    </p>
+
+    <p>
+      The video on the right shows a demonstration of the game, where players
+      move through the maze, collect bonuses, avoid or eat enemies, and reach the
+      green exit.
+    </p>
+  </div>
+
+  <div class="media-section">
+    <img class="photo" src="images/pacman.jpg" alt="Pac-Man on ATmega128L">
+
+    <video class="video" autoplay muted loop playsinline controls>
+      <source src="images/pacman_vid.mov" type="video/mp4">
+    </video>
+  </div>
+</section>
 
     <!-- RADAR HAND GESTURE RECOGNITION -->
     <section class="project-section" id="radar">
@@ -693,6 +693,11 @@
   </main>
   </main>
 </div>
+
+//cute little ladybug
+<div id="ladybug" class="ladybug" aria-hidden="true">🐞</div>
+
+
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll("model-viewer").forEach((viewer) => {
@@ -712,5 +717,26 @@
       });
     });
   </script>
+
+ <script>
+  const ladybug = document.getElementById("ladybug");
+
+  function flyAwayLadybug() {
+    if (ladybug.classList.contains("flying")) return;
+
+    /*
+      These values send the ladybug far outside the screen.
+      120vw = 120% of the screen width
+      -120vh = 120% above the screen height
+    */
+    ladybug.style.setProperty("--fly-x", "-120vw");
+    ladybug.style.setProperty("--fly-y", "-80vh");
+
+    ladybug.classList.add("flying");
+  }
+
+  ladybug.addEventListener("mouseenter", flyAwayLadybug);
+  ladybug.addEventListener("click", flyAwayLadybug);
+</script>
 </body>
 </html>
