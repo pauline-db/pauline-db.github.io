@@ -65,7 +65,7 @@ a:hover {
 
 .project-section {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 24px;
   margin: 40px 0;
 }
@@ -318,6 +318,7 @@ html {
 }
 
 body {
+  width: 100%;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 30px 20px 30px 200px; /* 180px fixed sidebar + 20px gap */
@@ -330,7 +331,6 @@ body {
 .page-layout {
   display: block;
   width: 100%;
-  max-width: 1100px;
   margin: 0;
   padding: 0 40px;
   box-sizing: border-box;
